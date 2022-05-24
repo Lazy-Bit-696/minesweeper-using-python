@@ -17,13 +17,12 @@ top_frame = tkinter.Frame( # Create an instance of class Frame
 )
 top_frame.place(x=0,y=0) # fram starting postiton
 
-left_frame = tkinter.Frame(
-    root,
-    bg='blue',
-    width=200,
-    height=300
+# button
+btn1 = tkinter.Button(
+    top_frame, # frame
+    bg='blue', # background
+    text='First Button' # button text shown
 )
-
-left_frame.place(x=0,y=100)
+btn1.place(x=0,y=0) # button position
 
 root.mainloop() # puts everything on the display, and responds to user input until the program terminates
