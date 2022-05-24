@@ -26,6 +26,21 @@ left_frame = tkinter.Frame(
     height=utils.height_percentage(75)
 )
 
-left_frame.place(x=0,y=utils.height_percentage(25))
+left_frame.place(
+    x=0,
+    y=utils.height_percentage(25)
+    )
+
+center_frame = tkinter.Frame(
+    root,
+    bg='green',
+    width=utils.width_percentage(75),
+    height=utils.height_percentage(75)
+)
+
+center_frame.place(
+    x=utils.width_percentage(25),
+    y=utils.height_percentage(25)
+    )
 
 root.mainloop() # puts everything on the display, and responds to user input until the program terminates
