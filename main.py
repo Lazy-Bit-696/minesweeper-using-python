@@ -1,6 +1,7 @@
 import tkinter # imports tkinter module which is used for GUI
 import settings # imports settings for windows size
 import utils
+import cell
 
 root = tkinter.Tk() # creates an instance of class Tk to form GUI window
 
@@ -42,5 +43,8 @@ center_frame.place(
     x=utils.width_percentage(25),
     y=utils.height_percentage(25)
     )
+
+c1 = cell.Cell()
+
 
 root.mainloop() # puts everything on the display, and responds to user input until the program terminates
