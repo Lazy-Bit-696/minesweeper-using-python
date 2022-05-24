@@ -13,7 +13,7 @@ root.resizable(False, False) # to make its width and height not resizable
 
 top_frame = tkinter.Frame( # Create an instance of class Frame
     root, # on whom will this override
-    bg='red', # frame color
+    bg='black', # frame color
     width=settings.WIDTH, # frame width
     height=utils.height_percentage(25) # frame height
 )
@@ -21,7 +21,7 @@ top_frame.place(x=0,y=0) # fram starting postiton
 
 left_frame = tkinter.Frame(
     root,
-    bg='blue',
+    bg='black',
     width=utils.width_percentage(25),
     height=utils.height_percentage(75)
 )
@@ -33,7 +33,7 @@ left_frame.place(
 
 center_frame = tkinter.Frame(
     root,
-    bg='green',
+    bg='black',
     width=utils.width_percentage(75),
     height=utils.height_percentage(75)
 )
