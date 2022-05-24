@@ -44,11 +44,24 @@ center_frame.place(
     y=utils.height_percentage(25)
     )
 
-c1 = cell.Cell()
-c1.create_btn_object(center_frame)
-c1.cell_btn_object.place(
+c1 = cell.Cell() # class instance
+c1.create_btn_object(center_frame) # creates button
+
+""" c1.cell_btn_object.place( # button placement
     x=0,
     y=0
+) """
+
+c1.cell_btn_object.grid( # instead of axis it takes coloumns and rows for placement
+    column=0,
+    row=0
+)
+
+c2 = cell.Cell()
+c2.create_btn_object(center_frame)
+c2.cell_btn_object.grid(
+    column=0,
+    row=1
 )
 
 root.mainloop() # puts everything on the display, and responds to user input until the program terminates

@@ -5,6 +5,7 @@ class Cell:
         self.is_mine = is_mine
         self.cell_btn_object = None
     
+    # create button
     def create_btn_object(self, frame):
         btn = Button(
             frame,
