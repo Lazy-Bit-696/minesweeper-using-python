@@ -1,5 +1,6 @@
 import tkinter # imports tkinter module which is used for GUI
 import settings # imports settings for windows size
+import utils
 
 root = tkinter.Tk() # creates an instance of class Tk to form GUI window
 
@@ -13,18 +14,18 @@ root.resizable(False, False) # to make its width and height not resizable
 top_frame = tkinter.Frame( # Create an instance of class Frame
     root, # on whom will this override
     bg='red', # frame color
-    width=800, # frame width
-    height=100 # frame height
+    width=settings.WIDTH, # frame width
+    height=utils.height_percentage(25) # frame height
 )
 top_frame.place(x=0,y=0) # fram starting postiton
 
 left_frame = tkinter.Frame(
     root,
     bg='blue',
-    width=200,
-    height=300
+    width=utils.width_percentage(25),
+    height=utils.height_percentage(75)
 )
 
-left_frame.place(x=0,y=100)
+left_frame.place(x=0,y=utils.height_percentage(25))
 
 root.mainloop() # puts everything on the display, and responds to user input until the program terminates
