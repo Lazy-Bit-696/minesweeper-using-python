@@ -53,6 +53,9 @@ for row in range(settings.GRID_SIZE):
             row=row
         )
 
-print(cell.Cell.all)
+cell.Cell.randomize_mines()
+
+for c in cell.Cell.all:
+    print(f"{c}:{c.is_mine}")
 
 root.mainloop() # puts everything on the display, and responds to user input until the program terminates
