@@ -53,4 +53,6 @@ for row in range(settings.GRID_SIZE):
             row=row
         )
 
+print(cell.Cell.all)
+
 root.mainloop() # puts everything on the display, and responds to user input until the program terminates
