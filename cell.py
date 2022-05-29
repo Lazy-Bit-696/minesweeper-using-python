@@ -19,7 +19,8 @@ class Cell:
     def create_btn_object(self, frame):
         btn = tkinter.Button(
             frame,
-            text="{}, {}".format(self.x,self.y)
+            width=5,
+            height=2
         )
         btn.bind('<Button-1>', self.left_click_actions ) # Left Click
         btn.bind('<Button-3>', self.right_click_actions ) # Right Click
