@@ -1,5 +1,6 @@
 import random
-from tkinter import Button
+import tkinter
+import settings
 
 class Cell:
     all = []
@@ -16,7 +17,7 @@ class Cell:
     
     # create button
     def create_btn_object(self, frame):
-        btn = Button(
+        btn = tkinter.Button(
             frame,
             text="{}, {}".format(self.x,self.y)
         )
@@ -37,7 +38,7 @@ class Cell:
     #randomize mine
     @staticmethod
     def randomize_mines():
-        picked_cells = random.sample(Cell.all, 6)
+        picked_cells = random.sample(Cell.all, settings.MINES_COUNT)
         print(picked_cells)
         for picked_cell in picked_cells:
             picked_cell.is_mine = True
