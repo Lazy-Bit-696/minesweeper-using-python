@@ -19,8 +19,8 @@ class Cell:
     def create_btn_object(self, frame):
         btn = tkinter.Button(
             frame,
-            width=5,
-            height=2
+            width=1,
+            height=1
         )
         btn.bind('<Button-1>', self.left_click_actions ) # Left Click
         btn.bind('<Button-3>', self.right_click_actions ) # Right Click
@@ -31,6 +31,9 @@ class Cell:
         if self.is_mine:
             self.show_mine()
         else:
+            if self.surrounded_cells_mines_length == 0:
+                for cell_obj in self.surrounded_cells:
+                    cell_obj.show_cell()
             self.show_cell()
 
     def get_cell_by_axis(self, x,y):
